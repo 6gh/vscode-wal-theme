@@ -4,7 +4,7 @@ import * as os from "node:os";
 import * as vscode from "vscode";
 import * as chokidar from "chokidar";
 import * as Color from "color";
-import template from "./template";
+import template, { ThemeType } from "./template";
 
 const walCachePath = path.join(os.homedir(), ".cache", "wal");
 const walColorsPath = path.join(walCachePath, "colors");
@@ -104,12 +104,16 @@ function generateColorThemes() {
   }
 
   // Generate the normal theme
-  const colorTheme = template(colors, false);
-  fs.writeFileSync(path.join(__dirname, "..", "themes", "wal.json"), JSON.stringify(colorTheme, null, 4));
+  const colorTheme = template(colors, ThemeType.DEFAULT);
+  fs.writeFileSync(path.join(__dirname, "..", "themes", "wal.json"), JSON.stringify(colorTheme, null, 2));
 
   // Generate the bordered theme
-  const colorThemeBordered = template(colors, true);
-  fs.writeFileSync(path.join(__dirname, "..", "themes", "wal-bordered.json"), JSON.stringify(colorThemeBordered, null, 4));
+  const colorThemeBordered = template(colors, ThemeType.BORDERED);
+  fs.writeFileSync(path.join(__dirname, "..", "themes", "wal-bordered.json"), JSON.stringify(colorThemeBordered, null, 2));
+
+  // Generate the OneDark theme
+  const colorThemeOneDark = template(colors, ThemeType.ONE_DARK);
+  fs.writeFileSync(path.join(__dirname, "..", "themes", "wal-one-dark.json"), JSON.stringify(colorThemeOneDark, null, 2));
 }
 
 /**

@@ -65,6 +65,12 @@
         "uiTheme": "vs-dark",
         "path": "./themes/wal-bordered.json",
         "_watch": true
+      },
+      {
+        "label": "Wal One Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/wal-one-dark.json",
+        "_watch": true
       }
     ]
   },
