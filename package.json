@@ -1,11 +1,12 @@
 {
+  "publisher": "dlasagno",
   "name": "wal-theme",
   "displayName": "Wal Theme",
+  "version": "1.2.0",
   "description": "A theme generated with pywal color palette",
-  "publisher": "dlasagno",
   "author": "Daniele Lasagno",
   "license": "MIT",
-  "version": "1.2.0",
+  "homepage": "https://github.com/dlasagno/vscode-wal-theme#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/dlasagno/vscode-wal-theme"
@@ -13,7 +14,16 @@
   "bugs": {
     "url": "https://github.com/dlasagno/vscode-wal-theme/issues"
   },
-  "homepage": "https://github.com/dlasagno/vscode-wal-theme#readme",
+  "keywords": [
+    "theme",
+    "pywal",
+    "wal"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "main": "./out/extension.js",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.34.0"
   },
@@ -21,20 +31,10 @@
     "ui",
     "workspace"
   ],
-  "categories": [
-    "Themes"
-  ],
-  "keywords": [
-    "theme",
-    "pywal",
-    "wal"
-  ],
-  "icon": "icon.png",
   "activationEvents": [
     "*",
     "onCommand:walTheme.update"
   ],
-  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
@@ -74,7 +74,11 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
     "lint": "eslint .",
-		"lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "color": "^4.2.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
@@ -85,9 +89,5 @@
     "eslint": "^9.9.1",
     "glob": "^11.0.0",
     "typescript": "^5.5.4"
-  },
-  "dependencies": {
-    "chokidar": "^3.6.0",
-    "color": "^4.2.3"
   }
 }
