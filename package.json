@@ -25,15 +25,13 @@
   "main": "./out/extension.js",
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.34.0"
+    "vscode": "^1.92.0"
   },
   "extensionKind": [
     "ui",
     "workspace"
   ],
   "activationEvents": [
-    "*",
-    "onCommand:walTheme.update"
   ],
   "contributes": {
     "commands": [
@@ -89,7 +87,6 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
     "@types/color": "^3.0.6",
-    "@types/glob": "^8.1.0",
     "@types/node": "^22.5.0",
     "@types/vscode": "^1.92.0",
     "eslint": "^9.9.1",
