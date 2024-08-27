@@ -8,7 +8,7 @@ export default antfu({
   ],
 
   files: [
-    '**/*.ts',
+    'src/**/*.ts',
   ],
 
   languageOptions: {
